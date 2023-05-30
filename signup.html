@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Sign Up</title>
+
+
+    <link rel="icon" href="assets/img/Logo.png" type="image/x-icon" />
+    
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+    <!-- MDB -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/mdb.min.css">
+    <link rel="stylesheet" href="assets/css/mdb.dark.min.css">
+
+    
+<style>
+ body{
+    background: rgba(0, 0, 0, 0.637) url("assets/img/sign.jpg");
+    background-size: cover;
+    background-blend-mode: darken;
+ }
+ h5{
+    font-size: 17px;
+    text-align: center;
+ }
+ h6{
+    margin-top: 2em;
+    font-size: 15px;
+ }
+ @media (max-width: 991.98px) {
+    .img {
+    width: 50%;
+    }
+    }
+    @media (max-width: 768px) {
+    .img {
+    width: 30%;
+    }
+}
+ input{
+    border: none;
+    outline: none;
+    width: 18em;
+    background: transparent;
+    padding: 0em 1em;
+ }
+ input,select,textarea{
+    color: white;
+    font-size: 12px;
+ }
+ input::-webkit-input-placeholder{
+    color: white;
+    font-size: 12px;
+ }
+ .box{
+    margin-top: 2.5em;
+    width: auto;
+    height: 2em;
+    outline: 1px solid #149ddd;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0em 1em;
+ }
+ .btn-info{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-top: 2.5em;
+    border-radius: 5px;
+    font-weight: 800;
+ }
+ form{
+    text-align: center;
+ }
+ .bi-house-fill{
+    background: #149ddd;
+    padding: 0.5em 1em;
+    border-radius: 50%;
+    cursor: pointer;
+}
+ .pop-main{
+    background: white;
+    padding: 0.1em 0.8em;
+    color: black;
+    border-radius: 5px;
+    visibility: hidden;
+}
+.pop-show{
+    visibility: visible;
+    transform: translateX(2px);
+    transition: .2s;
+    transition-duration: .4s;
+}
+.input-group span i{
+   color: seagreen;
+}
+</style>
+  </head>
+  <body>
+    <main>
+
+        <div class="container d-flex h-100 justify-content-center align-items-center" style="margin-top: 5em;" >
+            <img src="assets/img/Asset 1.png" width="15%" height="15%" class="img">
+            </div>
+
+            <div class="container d-flex h-100 justify-content-center align-items-center" style="margin-top: 3px;">
+               <h5>Create An Account In A Few Clicks</h5>
+        </div>
+        
+        <form action="">
+         <div class="container d-flex h-100 justify-content-center align-items-center">
+            <div class="form-horizontal">
+               <div class="input-group">
+                  <div class="box">
+                  <label><i class="bi-person-fill"></i></label>
+                  <input type="text" placeholder="Enter Full Name" id="contact-name" onkeyup="validateName()">
+                  <span id="name-error" style="font-size: 12px; color: #ff0000; position: absolute;
+                  right: 17px;
+                  "></span>
+               </div>
+               </div>
+      
+               <div class="input-group">
+                  <div class="box">
+                  <label><i class="bi-envelope-fill"></i></label>
+                  <input type="email" placeholder="Enter your Email" id="contact-email" onkeyup="validateEmail()">
+                  <span id="email-error"  style="font-size: 12px; color: #ff0000;
+                  position: absolute;
+                  right: 17px;
+                  "></span>
+               </div>
+            </div>
+   
+            
+            <div class="input-group">
+               <div class="box">
+               <label><i class="bi-lock-fill"></i></label>
+               <input type="password" placeholder="Password" id="contact-password" onkeyup="validatePassword()">
+               <span id="password-error"  style="font-size: 12px; color: #ff0000;
+               position: absolute;
+                  right: 17px;
+                  "></span>
+            </div>
+         </div>
+      
+               <button class="btn btn-info btn-block" onclick="return validateForm()">
+                  Sign Up
+               </button>
+               <span id="submit-error"   style="font-size: 12px; color: #ff0000;"></span>
+               <small>Already Have An Account? <a href="signin.html"> Sign In</a></small>
+             </form>
+            </div>
+            </div>
+
+
+        <div class="container d-flex h-100 flex-row-reverse align-items-center" style="margin-top: 6em;">
+            <i class="bi-house-fill" id="home" onmouseenter="visible()" onmouseleave="visible_1()" onclick="home()">
+            </i>&nbsp;
+            <div class="pop-main" id="pop-main">
+                <small style="font-weight: bolder;">Go Back Home</small>
+            </div>
+        </div>
+
+    </main>
+    
+
+    <!-- End project here-->
+
+    <script type="text/javascript" src="assets/js/mdb.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+ 
+    
+    <!-- Custom scripts -->
+    <script type="text/javascript" src="assets/js/index.js">
+    </script>
+  </body>
+</html>

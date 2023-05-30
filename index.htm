@@ -155,7 +155,15 @@
 </style>
   </head>
   <body>
-    <div id="overlay"></div>
+    <div id="overlay" class="overlay">
+      <i class="bi-emoji-frown-fill"></i>
+      <h3 class="overtxt">Please Sign In!</h3>
+      <h6 class="text-muted">Login Or Sign Up To Continue.</h6>
+      <btn class="btn-outline-info btn-block" style="margin-top: 3.5em;
+      cursor: pointer;"
+      onclick="closeMe()">
+      Close</btn>
+    </div>
     <!-- Begin project here-->
 
     <!-- ======= Header ======= -->
@@ -172,20 +180,21 @@
           <div class="position-sticky">
               
             <div class="list-group list-group-flush mx-3 mt-4">
-              <a href="#" class="list-group-item-action py-2 ripple active" style="border-inline-end:1px solid #01B7FF;">
+              <a href="#" class="list-group-item-action py-2 ripple active" 
+              style="border-inline-end:1px solid #01B7FF;">
                 <i class="bi-house-fill me-3" style="margin-left: 1em; color: #ffffff;"></i>
                 <span style="color:white">Home</span>
               </a>
-              <a href="#" class="list-group-item-action py-2 ripple">
+              <a href="#" class="list-group-item-action py-2 ripple"  onclick="openMe()">
              <i class="bi-inboxes-fill me-3" style="margin-left: 1em; color: #ffffff;"></i>
              <span style="color: white;">Subscriptions</span>
               </a>
-              <a href="#" class="list-group-item-action py-2 ripple">
+              <a href="#" class="list-group-item-action py-2 ripple" onclick="openMe()" >
                   <i class="bi-bookmark-check-fill me-3" style="margin-left: 1em; color: #ffffff;"></i>
                   <span style="color:#ffffff;">Saved</span></a>
-              <a href="#" class="list-group-item-action py-2 ripple">
-                    <i class="bi-question-circle-fill me-3" style="margin-left: 1em; color: #ffffff;"></i>
-                    <span style="color:#ffffff;">Help</span></a>
+              <a href="#" class="list-group-item-action py-2 ripple" onclick="openMe()">
+                    <i class="bi-star-fill me-3" style="margin-left: 1em; color: #ffffff;"></i>
+                    <span style="color:#ffffff;">Feedback</span></a>
                   
             </div>
           </div>
@@ -199,7 +208,7 @@
           <small class="text-muted" style="text-align: center;">
             Sign up to stay updated with recent developments.</small></div>
             <div class="d-flex justify-content-center align-items-end">
-            <btn class="btn-info btn-block" style="width: 14em;">
+            <btn class="btn-info btn-block" style="width: 14em; cursor: pointer;" onclick="sendSignUp()">
                 <small class="text-dark" style="font-weight: 550;">Get Started</small></btn>
         </div>
         </nav>
@@ -220,36 +229,65 @@
             <!-- Right links -->
             <ul class="navbar-nav ms-auto d-flex flex-row">
                 
-
               <div class="search-box">
                 <input type="text" class="search-input" placeholder="Start Looking For Something!">
                 <a class="search-btn" href="#">
-                  <!-- Seach Icon -->
                   <i class="bi-search"></i>
                 </a>
               </div>
-              <!-- Notification dropdown -->
+            
               <li>
-                <a class="nav-link d-md-flex input-group me-3" href="#">
-                  <i class="bi-moon"></i>
+                <a class="nav-link d-md-flex input-group me-3">
+                  <i class="bi-question-circle-fill"></i>
                 </a>
               </li>
       
-              <!-- Icon -->
               <li class="nav-item d-md-flex input-group me-3">
-                <a class="nav-link" href="#">
-                  <i class="bi-bell-fill"></i>
+                <a class="nav-link">
+                  <i class="bi-bell-fill" type="button" onclick="openDropdown1()" ></i>
+                  <ul class="menu1" id="menu1">
+                 
+                    <li>
+                   <small class="text-muted">Nothing Here Yet!</small>
+                   </li>
+
+                  <hr>
+                  
+                  <li> 
+                    <i class="bi-caret-up-fill" type="button" onclick="closeDropdown1()"
+                    style="font-size: 15px; text-align: center; color: white;">&nbsp;
+                    <small>Close</small></i>
+                    </li>
+                    
+                 </ul>
                 </a>
               </li>
-              <!-- Icon -->
-              <li class="nav-item d-md-flex input-group me-3">
-                <a class="nav-link" href="#">
-                  <i class="bi-gear"></i>
-                </a>
 
                 <li class="nav-item d-md-flex input-group me-3">
-                    <a class="nav-link" href="#">
-                 <i class="bi-person-circle"></i>
+                    <a class="nav-link">
+                 <i class="bi-person-circle" type="button" onclick="openDropdown()"></i>
+                 <ul class="menu" id="menu">
+                 
+                    <li>
+                    <btn class="btn-info btn-sm" onclick="sendSignUp()">
+                      Sign Up
+                    </btn>
+                    </li>
+
+                    <li>
+                    <btn class="btn-outline-info btn-sm" onclick="sendSignIn()">
+                      Sign In
+                      </btn>
+                  </li>
+                  <hr>
+                  
+                  <li> 
+                    <i class="bi-caret-up-fill" type="button" onclick="closeDropdown()" 
+                    style="font-size: 15px; text-align: center; color: white;">&nbsp;
+                    <small>Close</small></i>
+                    </li>
+                    
+                 </ul>
                     </a>
                   </li>
       
@@ -386,7 +424,7 @@
         <div class="txt-1">
           <b>Places You Should Consider Visiting Before You Die</b><br>
           <h6>Lance Han<br>
-          51K Views . A Month Ago</h6>
+          52K Views . A Month Ago</h6>
         </a>
         </div>
         </div>
@@ -422,7 +460,7 @@
             style="display: flex; justify-content: center; align-items: center; width: 8em; float: right; margin-top: 2em;">
             <h6 class="caption py-5" style="text-align: left; margin-left: 5px;">Get the most out<br> of the app!<br>
               <small>Sign up to get started</small>
-              <btn class="btn-info btn-block" style="width: 10em;">
+              <btn class="btn-info btn-block" style="width: 10em; cursor: pointer;" onclick="sendSignUp()">
                 <small class="text-dark" style="font-weight: 550;">Get Started</small></btn>
             </h6>
           </div>
@@ -451,7 +489,7 @@
  
     
     <!-- Custom scripts -->
-    <script type="text/javascript">
+    <script type="text/javascript" src="assets/js/index.js">
     </script>
   </body>
 </html>
