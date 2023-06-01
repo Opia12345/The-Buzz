@@ -245,6 +245,11 @@ var SEARCH_NEWS ='https://gnews.io/api/v4/search?q&apikey=';
         fetchGeneralNews();
     })
 
+generalBtn.addEventListener('click', function(){
+    newsType.innerHTML = '<h4>Trending</h4>';
+     fetchGeneralNews();
+});
+
 sportsBtn.addEventListener('click', function(){
     newsType.innerHTML = '<h4>Sports</h4>';
     fetchSportNews();
