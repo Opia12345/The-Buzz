@@ -241,11 +241,36 @@ body {
     width: 240px;
     padding: 0 6px;
   }
+  @media (max-width : 1199px){
+    .search-box:hover > .search-input {
+      width: 90px;
+      padding: 0 6px;
+    }
+  }
+  @media (max-width : 1368px){
+    .search-box:hover > .search-input {
+      width: 240px;
+      padding: 0 6px;
+    }
+  }
+  @media (max-width : 720px){
+    .search-box:hover > .search-input {
+      width: 200px;
+      padding: 0 6px;
+    }
+  }
+   @media (max-width : 914px){
+    .search-box:hover > .search-input {
+      width: 120px;
+      padding: 0 6px;
+    }
+  }
   .search-box:hover > .search-btn,
   .search-input:focus + .search-btn,
   .search-input:not(:placeholder-shown) + .search-btn {
     background: #01B7FF;
     color: #01B7FF;
+    border-radius: 50%;
   }
   .carousel::-webkit-scrollbar{
       display: none;

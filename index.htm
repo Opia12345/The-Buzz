@@ -30,6 +30,12 @@
 
     
 <style>
+   #onee{
+    background:rgba(0, 0, 0, 0.458)url(assets/img/carousel/g_.jpg);
+    background-size: cover;
+    max-width: 20em;
+    background-blend-mode: darken;
+  }
   #one{
     background:rgba(0, 0, 0, 0.458)url(assets/img/carousel/t_.jpg);
     background-size: cover;
@@ -37,119 +43,34 @@
     background-blend-mode: darken;
   }
   #two{
-    background:rgba(0, 0, 0, 0.558) url(assets/img/carousel/a_.jpg);
+    background:rgba(0, 0, 0, 0.558) url(assets/img/carousel/h_.jpg);
     background-size: cover;
     max-width: 20em;
     background-blend-mode: darken;
   }
   #three{
-    background:rgba(0, 0, 0, 0.558) url(assets/img/carousel/ar_.jpg);
+    background:rgba(0, 0, 0, 0.558) url(assets/img/carousel/bus_.jpg);
     background-size: cover;
     max-width: 20em;
     background-blend-mode: darken;
   }
   #four{
-    background:rgba(0, 0, 0, 0.558) url(assets/img/carousel/an_.jpg);
+    background:rgba(0, 0, 0, 0.558) url(assets/img/carousel/ent_.jpg);
     background-size: cover;
     max-width: 20em;
     background-blend-mode: darken;
   }
   #five{
-    background:rgba(0, 0, 0, 0.558) url(assets/img/carousel/f_.jpg);
+    background:rgba(0, 0, 0, 0.558) url(assets/img/carousel/sc_.jpg);
     background-size: cover;
     max-width: 20em;
     background-blend-mode: darken;
   }
   #six{
-    background: rgba(0, 0, 0, 0.558)url(assets/img/carousel/s_.jpg);
+    background: rgba(0, 0, 0, 0.558)url(assets/img/carousel/sp_.jpg);
     background-size: cover;
     max-width: 20em;
     background-blend-mode: darken;
-  }
-  #seven{
-    background:rgba(0, 0, 0, 0.558) url(assets/img/carousel/B_.jpg);
-    background-size: cover;
-    max-width: 20em;
-    background-blend-mode: darken;
-  }
-  #eight{
-    background: rgba(0, 0, 0, 0.558) url(assets/img/carousel/tr_.jpg);
-    background-size: cover;
-    max-width: 20em;
-    background-blend-mode: darken;
-  }
-  #nine{
-    background: rgba(0, 0, 0, 0.558) url(assets/img/carousel/P_.jpg);
-    background-size: cover;
-    max-width: 20em;
-    background-blend-mode: darken;
-  }
-
-
-
-
-  #one-1{
-    background: rgba(0, 0, 0, 0.459) url(assets/img/body/1.jpg);
-    background-size: cover;
-    width: auto;
-    height: 12em;
-    background-blend-mode: darken;
-  }
-  #two-2{
-    background: rgba(0, 0, 0, 0.459) url(assets/img/body/2.jpg);
-    background-size: cover;
-    width: auto;
-    height: 12em;
-    background-blend-mode: darken;
-  }
-  #three-3{
-    background: rgba(0, 0, 0, 0.459) url(assets/img/body/3.jpg);
-    background-size: cover;
-    width: auto;
-    height: 12em;
-    background-blend-mode: darken;
-  }
-
-  #four-4{
-    background: rgba(0, 0, 0, 0.459) url(assets/img/body/4.jpg);
-    background-size: cover;
-    width: auto;
-    height: 12em;
-    background-blend-mode: darken;
-  }
-  #five-5{
-    background: rgba(0, 0, 0, 0.459) url(assets/img/body/5.jpg);
-    background-size: cover;
-    width: auto;
-    height: 12em;
-    background-blend-mode: darken;
-  }
-  #six-6{
-    background: rgba(0, 0, 0, 0.459) url(assets/img/body/6.jpg);
-    background-size: cover;
-    width: auto;
-    height: 12em;
-    background-blend-mode: darken;
-  }
-
-  #seven-7{
-    background: rgba(0, 0, 0, 0.459) url(assets/img/body/7.jpg);
-    background-size: cover;
-    width: auto;
-    height: 12em;
-    background-blend-mode: darken;
-  }
-    #nine-9{
-    background: rgba(0, 0, 0, 0.459) url(assets/img/body/8.jpg);
-    background-size: cover;
-    width: auto;
-    height: 12em;
-    background-blend-mode: darken;
-  }
-  #eight-8{
-    width:auto;
-    height: 12em;
-    border: 2px solid rgb(0, 225, 255);
   }
 
 </style>
@@ -230,8 +151,8 @@
             <ul class="navbar-nav ms-auto d-flex flex-row">
                 
               <div class="search-box">
-                <input type="text" class="search-input" placeholder="Start Looking For Something!">
-                <a class="search-btn" href="#">
+                <input type="text" class="search-input" placeholder="Start Looking For Something!" id="newsQuery">
+                <a class="search-btn" href="#" id="searchBtn">
                   <i class="bi-search"></i>
                 </a>
               </div>
@@ -305,44 +226,34 @@
 <div class="container">
     
 <div class="carousel">
-  
+
+  <div class="carousel-body" id="onee" >
+    <a href="#general" id="general"><h5 class="txt">General</h5></a>
+  </div>
+
   <div class="carousel-body" id="one" >
-    <a href="#"><h5 class="txt">Tech</h5></a>
+    <a href="#tech" id="tech"><h5 class="txt">Tech</h5></a>
   </div>
   
   <div class="carousel-body" id="two">
-    <a href="#"><h5 class="txt">Architecture
-    </h5></a>
+    <a href="#health" id="health"><h5 class="txt">Health</h5></a>
   </div>
   
   <div class="carousel-body" id="three">
-    <a href="#"><h5 class="txt">Art</h5></a>
+    <a href="#business" id="business"><h5 class="txt">Business</h5></a>
   </div>
   
   <div class="carousel-body" id="four">
-    <a href="#"><h5 class="txt">Animals</h5></a>
+    <a href="#entertainment" id="entertainment"><h5 class="txt">Entertainment</h5></a>
   </div>
   
   <div class="carousel-body" id="five">
-    <a href="#"><h5 class="txt">Food</h5></a>
+    <a href="#science" id="science"><h5 class="txt">Science</h5></a>
   </div>
 
   <div class="carousel-body" id="six">
-    <a href="#"><h5 class="txt">Stocks</h5></a>
+    <a href="#sports" id="sports"><h5 class="txt">Sports</h5></a>
     </div>
-    
-    <div class="carousel-body" id="seven">
-      <a href="#"><h5 class="txt">Books</h5></a>
-      </div>
-      
-      <div class="carousel-body" id="eight">
-        <a href="#"><h5 class="txt">Travel</h5></a>
-        </div>
-
-        <div class="carousel-body" id="nine">
-          <a href="#"><h5 class="txt">Photography</h5></a>
-          </div>
-          <i class="bi-chevron-right"></i>
        
   </div>
 </div>
@@ -351,129 +262,10 @@
 <!--Navbar carousel container-->
 
 <div class="album py-5">
+  <div class="container" id="newsType"></div>
   <div class="container">
-
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-4">
-      
-    <div class="col-sm-12 col-lg-4 mb-4">
-      <a href="#">
-      <div class="stack-body" id="one-1">
-      </div>
-      <div class="txt-1">
-        <b>Fascinating Facts About Foxes</b><br>
-        <h6>Sharon Hull<br>
-        91K Views . 9 Days Ago</h6>
-      </a>
-      </div>
-    </div>
-
-
-    <div class="col-sm-12 col-lg-4 mb-4">
-      <a href="#">
-      <div class="stack-body" id="two-2">
-      </div>
-      <div class="txt-1">
-        <b>Meet La Casa De Papel, The Largest Building Yet!</b><br>
-        <h6>Simeon Dans<br>
-        231K Views . 29 Days Ago</h6>
-      </a>
-      </div>
-    </div>
-
-    <div class="col-sm-12 col-lg-4 mb-4">
-      <a href="#">
-      <div class="stack-body" id="three-3">
-      </div>
-      <div class="txt-1">
-        <b>Foods You Really Should Stop Eating</b><br>
-        <h6>Dr. James<br>
-        11K Views . 2 Days Ago</h6>
-      </a>
-      </div>
-      </div>
-
-      <div class="col-sm-12 col-lg-4 mb-4">
-        <a href="#">
-        <div class="stack-body" id="four-4">
-        </div>
-        <div class="txt-1">
-          <b>These Plants May Save You One Day</b><br>
-          <h6>Samuel Lim<br>
-          13K Views . 4 Days Ago</h6>
-        </a>
-        </div>
-      </div>
-  
-  
-      <div class="col-sm-12 col-lg-4 mb-4">
-        <a href="#">
-        <div class="stack-body" id="five-5">
-        </div>
-        <div class="txt-1">
-          <b>How Smart Are You? Take This Quiz To Find Out</b><br>
-        <h6>Jack Harry<br>
-        7K Views . 1 Days Ago</h6>
-      </a>
-        </div>
-      </div>
-  
-      <div class="col-sm-12 col-lg-4 mb-4">
-        <a href="#">
-        <div class="stack-body" id="six-6">
-        </div>
-        <div class="txt-1">
-          <b>Places You Should Consider Visiting Before You Die</b><br>
-          <h6>Lance Han<br>
-          52K Views . A Month Ago</h6>
-        </a>
-        </div>
-        </div>
-
-        <div class="col-sm-12 col-lg-4 mb-4">
-          <a href="#">
-          <div class="stack-body" id="seven-7">
-          </div>
-          <div class="txt-1">
-            <b>Ranking The Most Expensive Sport</b><br>
-            <h6>Mack Boulder<br>
-            221K Views . 19 Days Ago</h6>
-          </a>
-          </div>
-        </div>
-    
-        <div class="col-sm-12 col-lg-4 mb-4">
-          <a href="#">
-          <div class="stack-body" id="nine-9">
-          </div>
-          <div class="txt-1">
-            <b>Space: What's New?</b><br>
-            <h6>Jumble Shakes<br>
-            72K Views . 6 Days Ago</h6>
-            </a>
-          </div>
-          </div>
-
-
-        <div class="col-sm-12 col-lg-4 mb-4">
-          <div class="stack-body" id="eight-8">
-            <img class="img" src="assets/img/body.svg" 
-            style="display: flex; justify-content: center; align-items: center; width: 8em; float: right; margin-top: 2em;">
-            <h6 class="caption py-5" style="text-align: left; margin-left: 5px;">Get the most out<br> of the app!<br>
-              <small>Sign up to get started</small>
-              <btn class="btn-info btn-block" style="width: 10em; cursor: pointer;" onclick="sendSignUp()">
-                <small class="text-dark" style="font-weight: 550;">Get Started</small></btn>
-            </h6>
-          </div>
-          <div class="txt-1">
-          </div>
-        </div>
-
-       
-
-      
-
-    </div>
-    </div>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-2 g-4" id="newsContainer"></div>
+  </div>
     </div>
     </div>
     
